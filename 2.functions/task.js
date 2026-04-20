@@ -1,8 +1,7 @@
 function getArrayParams(...arr) {
-  var min = Infinity;
-  var max = -Infinity; 
-  var sum = 0;
-  var avg = 0;
+  let min = Infinity;
+  let max = -Infinity; 
+  let sum = 0;
   for(let i = 0; i<arr.length;i++){
      sum += arr[i];
      if(arr[i]>max)
@@ -10,7 +9,8 @@ function getArrayParams(...arr) {
     if(arr[i]<min)
       min = arr[i]
   }
-  avg = sum / arr.length;
+
+  let avg = +(sum / arr.length).toFixed(2);  
   console.log(min, max, avg);
   return { min: min, max: max, avg: avg };
 }
@@ -42,9 +42,10 @@ let sumEvenElement = 0;
       sumOddElement += 1;
     }
     let ra= sumEvenElement - sumOddElement;
+  }
     return ra;
-}
 
+    
 function averageEvenElementsWorker(...arr) {
 let sumEvenElement = 0;
     let countEvenElement = 0; 
